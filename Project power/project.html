@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    
+    <h1>QUESTIONNAIRE</h1>
+    <h3><b>Tic where applicable</b></h3>
+    <div>
+    <div class="Q1">
+        <p>Q1. What is your name?</p>
+    <input type="text">
+</div>
+
+    <div class="Q2"><p>Q2. What is your gender?</p>
+    </div>
+   <div class="choice">
+     <input type="checkbox"><p>Male</p>
+    <input type="checkbox"><p>Female</p>
+    <input type="checkbox"><p>Rather not to say</p>
+</div>
+
+<div class="Q3">    
+    <p>Q3. How old are you</p>
+    <input type="number">
+</div>
+
+<div class="Q4">  
+     <p>Q4. Where do you come from</p>
+    <input type="text">
+</div>
+<div class="Q5">
+    <p>Q5. What do you do for a living</p>
+    <input type="text">
+</div>
+</div>
+<button>SUBMIT</button>
+</body>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        column-gap: 10px;
+    }
+    .Q1{
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+    }
+        .Q2{
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+        }
+        .choice{
+            display: grid;
+            grid-template-columns: repeat(2,60px);
+        }
+        .Q3{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .Q4{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        .Q5{
+            display: flex;
+            flex-direction: row;
+            gap:10px;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+        }
+        button{
+            width: 100px;
+            align-self: center;
+            color: #f0f8ff;
+            background: #08b908;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        button:active{
+            transform: scale(0.9);
+            background: #af0909;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    </style>
+</html>

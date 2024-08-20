@@ -7,7 +7,7 @@
 <body>
     <div class="container">
     <h1>DATE FINDER</h1>
-   <select>
+   <select id="century">
     <option value="0">1700-1799</option>
     <option value="2">1800-1899</option>
     <option value="4">1900-1999</option>
@@ -16,7 +16,8 @@
     <option value="2">4000-4099</option>
     <option value="4">5000-5099</option>
    </select>
-    <select>
+   <input type="number" id="year" placeholder="Year">
+    <select id="month">
         <option value="0">Jan</option>
         <option value="3">Feb</option>
         <option value="3">Mar</option>
@@ -31,8 +32,8 @@
         <option value="3">Dec</option>
     </select>
     <input type="number" id="date" placeholder="Date">
-    <input type="text" id="results" placeholder="The day was on a...">
-    <button>FIND</button>
+    <input type="text" id="results">
+    <button onclick="calc()">FIND</button>
     <button>CLEAR</button>
     <button>ABOUT</button>
     <p>&copy Created by Lai.E</p>

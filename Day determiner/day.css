@@ -12,17 +12,20 @@ input{
     border-radius: 5px;
     height: 30px;
     font-size: 20px;
-    width: 300px;
+    width: 100%;
     outline: none;
     padding: 10px;
+    border: none;
+    background-size: cover;
 }
 
 select{
     height:40px;
-    width: 330px;
+    width: 105%;
     border-radius: 5px;
-    padding: 10px;
+    padding: 9px;
     font-size: 18px;
+    border: none;
   }
 
 .container{
@@ -45,7 +48,7 @@ select{
 }
 
 button {
-    width: 100px;
+    width: 30%;
     padding: 8px;
     font-size: 16px;
     background-color: #4caf50;
@@ -75,8 +78,17 @@ button {
   p{
     font-size: 30px;
     color: #f3e6d6;
+    margin-top: 0;
   }
   
   h1{
     color: #f3e6d6;
+    margin-bottom: 0px;
+    animation: bounce 1s infinite;
   }
+
+  @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+  }
+  

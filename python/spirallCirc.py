@@ -1,10 +1,10 @@
 import turtle
 animation = turtle.Turtle()
-animation.speed(40)
-animation.hideturtlr()
+animation.speed(20)
+animation.hideturtle()
 animation.getscreen().bgcolor("black")
-animation.color("aqua")
+animation.color("red")
 
 for i in range(170):
     animation.circle(i)
-    animation.rotate(5)
+    animation._rotate(10)

@@ -1,0 +1,1 @@
+let choices = ['rock', 'paper', 'scissors']

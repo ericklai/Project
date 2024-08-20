@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meshark's Discounts</title>
+</head>
+<header>Meshack diaries</header>
+<body>
+    <h1>CALCULATOR</h1>
+<div class="container">
+    <input id="result" type="text" readonly>
+    <div class="btns">
+    <button id="btn">0</button>
+    <button id="btn">1</button>
+    <button id="btn">2</button>
+    <button id="btn">3</button>
+    <button id="btn">4</button>
+    <button id="btn">5</button>
+    <button id="btn">6</button>
+    <button id="btn">7</button>
+    <button id="btn">8</button>
+    <button id="btn">9</button>
+    <button>CLR</button>
+    <button>CALC</button>
+</div>
+</div>
+</body>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btns{
+        display: grid;
+        grid-template-columns: repeat(3,2fr);
+        gap: 10px;
+    }
+</style>
+<script>
+    let display = document.querySelector("#result")
+    let button =  document.querySelectorAll("#btn")
+    button.forEach(button =>{
+        button.addEventListener('click',function(){
+        display.textContent = target;    
+        })
+    })
+</script>
+</html>
