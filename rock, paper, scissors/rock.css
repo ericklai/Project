@@ -19,12 +19,35 @@ body{
 h1{
     color:#6d0101;
 }
+
+#player, #computer{
+    font-size: 20px;
+    margin-top: 15px;
+}
+
 #rock:active{
     transform: scale(0.9);
 }
+
 #paper:active{
     transform: scale(0.9);
 }
+
 #scissors:active{
     transform: scale(0.9);
+}
+
+#result{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.score{
+    font-size: 2rem;
+}
+
+.green, .playerScoreDisplay{
+    color: green;
+}
+.red, .compScoreDisplay{
+    color: red;
 }

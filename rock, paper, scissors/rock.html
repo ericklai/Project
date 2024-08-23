@@ -7,13 +7,27 @@
 </head>
 <link rel="stylesheet" href="rock.css">
 <body>
+
    <h1>ROCK-PAPER-SCISSORS</h1> 
    <label for="Lai">By Lai.E</label>
+
    <div id="container">
-   <div id="rock">👊🏾</div>
-   <div id="paper">✋🏾</div>
-   <div id="scissors">✌🏾</div>
+   <div onclick="playGame('rock')" id="rock">👊🏾</div>
+   <div onclick="playGame('paper')" id="paper">✋🏾</div>
+   <div onclick="playGame('scissors')" id="scissors">✌🏾</div>
 </div>
+
+<div id="player">PLAYER:</div>
+<div id="computer">COMPUTER:</div>
+<div id="result"></div>
+
+<div class="score">Player score: 
+    <span class="playerScoreDisplay">0</span>
+
+<div class="score">Computer score: 
+    <span class="compScoreDisplay">0</span>
+</div>
+
 </body>
 <script src="rock.js"></script>
 </html>
