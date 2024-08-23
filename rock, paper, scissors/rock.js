@@ -15,18 +15,18 @@ function playGame(playerChoice){
     let result = ""
 
     if(playerChoice === compChoice){
-        result = "It's a tie!" 
+        result = "IT' A TIE!" 
     }
     else{
         switch(playerChoice){
             case "rock":
-            result = (compChoice === "scissors") ? "You win" : "You lose";
+            result = (compChoice === "scissors") ? "YOU WIN🎉" : "YOU LOSE😭";
             break;
             case "paper":
-            result = (compChoice === "rock") ? "You win" : "You lose";
+            result = (compChoice === "rock") ? "YOU WIN🎉" : "YOU LOSE😭";
             break;
             case "scissors":
-            result = (compChoice === "paper") ? "You win" : "You lose";
+            result = (compChoice === "paper") ? "YOU WIN🎉" : "YOU LOSE😭";
             break;
         }
     }
@@ -36,12 +36,12 @@ function playGame(playerChoice){
 
    display.classList.remove("green", "red")
    switch(result){
-    case "You win":
+    case "YOU WIN🎉":
         display.classList.add("green");
         playerScore++;
         playerScoreDisplay.textContent = playerScore;
         break;
-        case "You lose":
+        case "YOU LOSE😭":
             display.classList.add("red");
             compScore++;
             compScoreDisplay.textContent = compScore;
