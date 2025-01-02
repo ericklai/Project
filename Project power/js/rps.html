@@ -1,0 +1,70 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-paper-scissors</title>
+    </head>
+
+    <body>
+    <p>Rock-paper-scissors</p>
+
+    <button onclick="playGame('rock')">Rock</button>
+
+    <button onclick="playGame('paper')">Paper</button>
+
+    <button onclick="playGame('scissors')">Scissors</button>
+
+
+
+    <script>
+        let result = ''
+        function playGame(playerMove){
+            pickComp()
+            if (playerMove === 'scissors'){
+                if(comp === 'rock'){
+    result = 'You lose'
+    }else if(comp === 'paper'){
+    result = 'You win'
+    }else if(comp === 'scissors'){
+    result = 'Tie'
+    }
+            } else if(playerMove === 'paper'){
+                if(comp === 'rock'){
+    result = 'You win'
+    }else if(comp === 'paper'){
+    result = 'Tie'
+    }else if(comp === 'scissors'){
+    result = 'You lose'
+    }
+            } else if(playerMove === 'rock'){
+    if(comp === 'rock'){
+    result = 'Tie'
+    }else if(comp === 'paper'){
+    result = 'You lose'
+    }else if(comp === 'scissors'){
+    result = 'You win'
+    }
+            }
+
+    alert(`You picked ${playerMove}. Computer picked ${comp}. ${result}`)
+        }
+
+
+    function pickComp(){
+    const randomNumber = (Math.random())
+    if (randomNumber >= 0 && randomNumber < 1/3) {
+    comp = ('Rock')
+    }else if(randomNumber >= 1/3 && randomNumber < 2/3) {
+    comp = ('paper')
+    }else if(randomNumber >= 2/3 && randomNumber < 1){
+    comp = ('scissors')
+    }
+
+    return 
+    }
+    </script>
+
+    </body>
+    </html>

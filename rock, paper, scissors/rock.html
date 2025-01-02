@@ -7,7 +7,15 @@
 </head>
 <link rel="stylesheet" href="rock.css">
 <body >
-
+    
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#"  id="open" onclick="popup.showModal()">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
+      </nav>
    <h1>ROCK-PAPER-SCISSORS</h1> 
    <label for="Lai">By Lai.E</label>
 
@@ -27,7 +35,16 @@
 <div class="score">Computer score: 
     <span class="compScoreDisplay">0</span>
 </div>
-
+<button id="open" onclick="popup.showModal()">ABOUT</button>
+    <dialog id="popup">
+        <div id="head">
+        <button id="close" onclick="popup.close()">&times</button>
+    </div>
+    <h3>ROCK PAPER SCISSORS</h3>
+        <ul><b>DEVELOPER:</b> <br><li>LAI ERICK MUTHAMA</li></ul>
+        <ul><b>APP VERSION:</b> <br>1.0</ul>
+        <h4>&copy 2024</h4>  
+    </dialog>
 </body>
 <script src="rock.js"></script>
 </html>

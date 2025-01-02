@@ -1,15 +1,17 @@
-*{
-    font-family: cursive;
-}
+
+
 body{
+    font-family: cursive;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+     justify-content: center;
     background-color: antiquewhite;
-   
+    align-self: center; 
+    
 }
 #container{
+    font-family: cursive;
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -45,6 +47,7 @@ h1{
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
 .score{
     font-size: 2rem;
 }
@@ -55,6 +58,75 @@ h1{
 .red, .compScoreDisplay{
     color: red;
 }
+
 img{
     background-size: cover;
 }
+
+#popup{
+    box-shadow: 0px 0px 10px #000000b3;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding:0px;
+    
+}
+
+#close{
+    float: right;
+    border: none;
+    margin-left: 0px;
+    font-size: 20px;
+}
+#close:hover{
+    background-color: #ee0606;
+    cursor: pointer;
+}
+#close:active{
+    outline: none;
+}
+
+#head{
+    width: 230px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+
+h3,h4{
+    color: #8f0a94;
+}
+ 
+nav {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+

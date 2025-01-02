@@ -30,3 +30,12 @@ let display = document.querySelector('#results')
         break;
 }
 }
+
+function clear(){
+    let century = document.querySelector("#century").value = '';
+    let year = document.querySelector("#year").value = '';
+    let month = document.querySelector("#month").value = '';
+    let date = document.querySelector("#date").value = '';
+    let display = document.querySelector('#results');
+    display.value = '';
+}

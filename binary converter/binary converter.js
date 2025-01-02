@@ -4,14 +4,14 @@ function calc() {
     let oct = document.querySelector('#octal');
     let hex = document.querySelector('#hexadecimal');
     binary = decimal.toString(2); 
-    bin.value =+ binary;
+    bin.value = binary;
     octal = decimal.toString(8)
-    oct.value =+ octal;
-    hexadecimal = decimal.toString(16)
-    hex.value =+ hexadecimal;
+    oct.value = octal;
+    hexadecimal = decimal.toString(16).toUpperCase()
+    hex.value = hexadecimal;
 }
 function clearResult() {
-    let bin = document.querySelector('#binary').value = '';
+    let bin = document.querySelector('#binary');
     let decimal = document.querySelector('#decimal').value = '';
     let oct = document.querySelector('#octal');
     let hex = document.querySelector('#hexadecimal');
