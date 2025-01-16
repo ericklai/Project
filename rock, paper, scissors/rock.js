@@ -30,6 +30,8 @@ function playGame(playerChoice){
             break;
         }
     }
+
+    
    player.textContent = `PLAYER: ${playerChoice}`
    computer.textContent = `COMPUTER: ${compChoice}`
    display.textContent = result
