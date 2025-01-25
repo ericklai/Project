@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>R-P-S</title>
+</head>
+<body>
+<h2>
+  ROCK-PAPER-SCISSORS 
+</h2>
+  <div id="container">
+  <div onclick="playGame('rock')" id ="rock">👊🏽</div>
+  <div onclick="playGame('paper')" id ="paper">🖐🏽</div>
+  <div onclick="playGame('scissors')" id ="scissors">✌🏽</div>
+  </div>
+  <div id="announcer">
+    <p>You chose: <span id="player"> </span></p>
+    <p>Computer chose: <span id="comp"> </span></p>
+    <p>WINS: <span id="wins">0</span></p>
+    <p>LOSSES: <span id="losses">0</span></p>
+    <p>TIES: <span id="ties">0</span></p>
+  </div>
+  
+  <button onclick="resetScore()" id="reset">Reset</button>
+  <button onclick="popup.showModal()" id="about">ABOUT</button>
+<dialog id="popup">
+  <h3>ROCK-PAPER-SCISSORS</h3>
+  <ul>
+    <li> <h4>DEVELOPER: LAI ERICK MUTHAMA</h4></li>
+    <li> <h4>APP VERSION: 2.0</h4>
+  </ul></li>
+<p id="copy">&copy 2025</p>
+<button onclick="popup.close()" id="close">Close</button>
+</dialog>
+</body>
+
+
+
+<script src="script.js"></script>
+</html>

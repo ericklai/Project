@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ <title>NS CONVERTER</title>
+  </head>
+  <link rel="stylesheet" href="Binary converter.css">
+  <body>
+    <div class="container">
+      <h2>NS CONVERTER</h2>
+      <input type="number" id="decimal" placeholder="Enter decimal number..." />
+      <input type="number" id="binary" placeholder="Binary...">
+      <input type="number" id="octal" placeholder="Octal...">
+      <input type="text" id="hexadecimal" placeholder="Hexadecimal...">
+
+      <button id="clear">CLEAR</button>
+      
+      <button id="open" onclick="popup.showModal()">About</button>
+      
+      <dialog id="popup">
+        <h2 id="head">NS CONVERTER 1.0</h2>
+        <h4>Developer:</h4>
+        <ul>
+          <li>Lai Eric Muthama</li>
+        </ul>
+        <h4>&copy 2024</h4>
+        <button id="close" onclick="popup.close()">Close</button>
+      </dialog>
+    </div>
+    
+    <style>
+     
+      body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+        
+        width: 100vw;
+        height: 100vh;
+         gap: 25px;
+      }
+      
+      h2 {
+        margin: 20px 20px 20px 20px;
+        text-align: center ;
+        background: linear-gradient(40deg,#3EFD0B,#000000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 1px solid #116404;
+      }
+      
+      input {
+        padding: 10px;
+        margin: 20px;
+        font-size: 20px;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: 0px 0px 10px #A29D9D;
+        border: none;
+      }
+      
+      #result {
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      button {
+        width: 100px;
+        height: 35px;
+        font-size: 16px;
+        background-color: #21B922;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
+      
+      button:active {
+        background-color: #3e8e41;
+      }
+      
+      button:focus {
+        outline: none;
+      }
+      
+      p{
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h3{
+        text-align: center;
+      }
+      
+      #head{
+        margin-top: 0;
+        text-align: center ;
+        background: linear-gradient(40deg,#8E04FF,#000000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      h4{
+        text-align: center;
+        color: #8E04FF;
+      }
+      
+      #close{
+        background: #8F0000;
+        color:#FFFFFF;
+      }
+      
+      #open{
+        background: #FF840F
+      }
+      #popup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+        z-index: -1;
+        border: none;
+        border-radius:4px;
+        box-shadow: 0px 0px 10px #8C889C;
+      }
+      </style>
+      
+    <script>
+let dec = parseInt(document.querySelector('#decimal').addEventListener('input',
+function (){
+let dec = parseInt(document.querySelector('#decimal').value)
+let bin = document.querySelector('#binary')
+let oct = document.querySelector('#octal')
+let hex = document.querySelector('#hexadecimal')
+ bin = dec.toString(2)
+ oct = dec.toString(8)
+ hex = dec.toString(16).toUpperCase()
+ binary.value = bin
+ octal.value = oct
+ hexadecimal.value = hex
+}))
+
+let clear = document.querySelector('#clear').addEventListener('click', function () {
+  let bin = document.querySelector('#binary').value = ''
+let oct = document.querySelector('#octal').value = ''
+let hex = document.querySelector('#hexadecimal').value = ''
+let dec = document.querySelector('#decimal').value = ''
+})
+    </script>
+    
+  </body>
+</html>

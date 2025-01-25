@@ -1,0 +1,107 @@
+    * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+      }
+      
+      .container {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      h2 {
+        margin-top: 0;
+        text-align: center ;
+        background: linear-gradient(40deg,#3EFD0B,#000000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      input {
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        border-radius: 5px;
+        outline: none;
+      }
+      
+      #result {
+        padding: 10px;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      button {
+        width: 100px;
+        height: 35px;
+        font-size: 16px;
+        background-color: #21B922;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
+      
+      button:active {
+        background-color: #3e8e41;
+      }
+      
+      button:focus {
+        outline: none;
+      }
+      
+      p{
+        font-size: 40px;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      h3{
+        text-align: center;
+      }
+      
+      #head{
+        margin-top: 0;
+        text-align: center ;
+        background: linear-gradient(40deg,#8E04FF,#000000);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      h4{
+        text-align: center;
+        color: #8E04FF;
+      }
+      
+      #close{
+        background: #8F0000;
+        color:#FFFFFF;
+      }
+      
+      #popup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+      }

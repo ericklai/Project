@@ -1,0 +1,116 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F2F2F2;
+  row-gap: 20px;
+  
+}
+
+h2{
+  text-align: center;
+  border-bottom: 1px solid #000000;
+  font-family: cursive;
+  
+}
+
+p{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 60px;
+  padding-bottom: 0;
+  margin-top: 10px;
+  width: 95vw;
+  
+}
+
+#reset{
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #46BF00;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  width: 50vw;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#reset:active {
+  transform: scale(0.9);
+  transition: 80ms;
+}
+
+#about,#close{
+  justify-content: center;
+  background-color: #DF6B1F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  width: 50vw;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#about:active {
+  transform: scale(0.9);
+  transition: 80ms;
+}
+
+#popup{
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #626262;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+ text-align: center;
+}
+
+#copy {
+  color: #A001E6;
+  align-self: center;
+}
+
+#rock, #paper, #scissors{
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #000000b3;
+}
+
+#rock:active, #paper:active, #scissors:active{
+  transform: scale(0.9);
+  transition: 80ms;
+}
+
+#wins{
+  color: #118d11;
+}
+#losses{
+  color: #ca0606;
+}
+#ties{
+  color: #0049b6;
+}
+
+p{
+  font-size: 25px;
+}
