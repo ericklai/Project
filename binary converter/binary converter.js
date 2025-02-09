@@ -1,18 +1,22 @@
-function calc() {
-    let decimal = parseInt(document.querySelector('#decimal').value);
+ 
+    let dec = parseInt(document.querySelector('#decimal')
+    .addEventListener('input', 
+        function(){
+    let dec = parseInt(document.querySelector('#decimal').value)
     let bin = document.querySelector('#binary');
     let oct = document.querySelector('#octal');
     let hex = document.querySelector('#hexadecimal');
-    binary = decimal.toString(2); 
+    binary = dec.toString(2); 
     bin.value = binary;
-    octal = decimal.toString(8)
+    octal = dec.toString(8)
     oct.value = octal;
-    hexadecimal = decimal.toString(16).toUpperCase()
+    hexadecimal = dec.toString(16).toUpperCase()
     hex.value = hexadecimal;
-}
+    }))
+
 function clearResult() {
     let bin = document.querySelector('#binary');
-    let decimal = document.querySelector('#decimal').value = '';
+    let dec = document.querySelector('#decimal').value = '';
     let oct = document.querySelector('#octal');
     let hex = document.querySelector('#hexadecimal');
     bin.value ='';

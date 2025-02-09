@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
     <title>NS CONVERTER</title>
   </head>
@@ -15,9 +16,18 @@
       <input type="number" id="binary" placeholder="Binary..." />
       <input type="number" id="octal" placeholder="Octal..." />
       <input id="hexadecimal" placeholder="Hexadecimal..." />
-      <button onclick="calc()">Calculate</button>
+      <!-- <button id="calc()">Calculate</button> -->
       <button onclick="clearResult()">Clear</button>
-      <p>&copy Made by Lai</p>
+      <button onclick="popup.showModal()">About</button>
+      <dialog id="popup">
+        <h2 id="head">NS CONVERTER 1.0</h2>
+        <h4>Developer:</h4>
+        <ul>
+          <li>Lai Eric Muthama</li>
+        </ul>
+        <h4>&copy 2024</h4>
+        <button id="close" onclick="popup.close()">Close</button>
+      </dialog>
     </div>
     <script src="binary converter.js"></script>
   </body>
