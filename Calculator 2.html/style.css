@@ -8,25 +8,30 @@ html, body{
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     background-color: #E6E6E6;
     margin: 0;
+    padding: 0;
 }
 
 input{
-    height: 20vh;
+    height: 30vh;
     border: none;
     outline: none;
     display: inline;
     width: 100%;
-    font-size: 25px;
+    font-size: 5vh;
     text-align: right;
 }
 
 #container{
-    display: inline;
+    display: grid;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #btns{
@@ -35,27 +40,31 @@ input{
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(4,60px);
-    gap: 15px;
-    height: 80vh;
+    justify-content: space-between;
+    gap: 10px;
+    height: 70vh;
+    width: 100vw;
     background-color: #161616;
 }
 
 button{
     cursor: pointer;
-    background: none;
+    background: #1b1b1b;
     border-radius: 50%;
     border: none;
     font-size: 4vh;
+    width: 100%;
 }
 button:active{
     background-color: #272727;
+    filter: brightness(120%)
 }
 
 
 .num,.percent{
     color: #E6E6E6;
 }
-.operator{
+.operator, .bracket{
     color: rgb(0, 247, 255);
 }
 .clear,.del{
@@ -64,19 +73,19 @@ button:active{
 
 .equals{
     background-color: #fc5000;
-    border-radius: 10px;
-    grid-row: span 2;
+    /* border-radius: 10px; */
 }
 .equals:active{
     background-color: #e64c05;
 }
 
 .error{
-    background-color: red;
+    background-color: #ff0000;
+    font-size: 7vh;
 }
 
 .position{
     text-align: right;
-    padding-top: 90px;
-    font-size: 25px;
+    padding-top: 15vh;
+    font-size: 6vh;
 }

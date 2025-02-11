@@ -7,12 +7,48 @@
 </head>
 <body>
     <p>Youtube subscribe button</p>
-    <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
+    <button onclick="subscribe()" class="js-subscribe-button subscribe-button">Subscribe</button>
 
 <p>Amazon shipping calculator</p>
-<input class="js-cost-input" placeholder="Cost of order" type="number" onkeydown="handleCostKeydown(event)"/>
-<button onclick="calculate()">Calculate</button>
+<input class="js-cost-input cost-input" placeholder="Cost of order" type="number" onkeydown="handleCostKeydown(event)"/>
+<button onclick="calculate()" class="calculate-button">Calculate</button>
 <p class="js-total-cost"></p>
+
+<style>
+    body{
+        font-family: Arial;
+    }
+
+    .subscribe-button{
+        border: none;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+    .subscribed{
+        background-color: #da0000;
+        color: #000000;
+    }
+
+    .cost-input{
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .calculate-button{
+        border: none;
+        background-color: #008000;
+        color: #ffffff;
+        padding: 12px 15px;
+        cursor: pointer;
+    }
+
+</style>
 
     <script>
         String(25)
@@ -41,9 +77,11 @@
         function subscribe(){
             const buttonElement = document.querySelector('.js-subscribe-button')
    if(buttonElement.innerText === 'Subscribe') {
-    buttonElement.innerText = 'Subscribed'
+    buttonElement.innerText = ' 🔔Subscribed'
+    buttonElement.classList.add('subscribed')
    }else{
     buttonElement.innerText = 'Subscribe'
+    buttonElement.classList.remove('subscribed')
    }
         }
         </script>
