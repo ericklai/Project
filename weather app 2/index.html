@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header" >
+            <h1 class="city">NAIROBI WEATHER </h1>
+            <div class="date-time">
+            <h3 class="day">Monday</h3>
+            <h3 class="date">12/23/2024</h3>
+            <h3 class="time" aria-live="polite">12:12:00</h3>
+        </div>
+        </div>
+        <div id="loader" hidden>LOADING...</div>
+        <div id="weather" aria-live="polite">
+            <div class="main">
+            <p class="cloud-cover">Cloudy</p>
+            <p class="temp"> 0°ᶜ</p>
+        </div>
+            <p class="shower">Rainfall: 0 mm</p>
+            <p class="rain">Total Rain: 0 mm</p>
+            <p class="humidity">Humidity: 0%</p>
+            <p class="windSpeed">Wind-Speed: 0 km/h</p>
+            <p class="windDirection">Wind-Direction: 0°</p>
+            <p class="elevation">Elevation: 0m above sea level</p>
+            <!-- <p class="wind-direction">N/A</p>
+            <p class="sunrise">N/A</p>
+            <p class="sunset">N/A</p> -->
+        </div>
+        <label for="city">City Name</label>
+        <input type="text" id="city" placeholder="Enter a city..."   aria-label="Enter city name"/>
+        <div class="button-container">
+        <button id="getCurrentLocation">Use My Location</button>
+        <button id="toggleUnit">Switch to °F</button>
+        <button id="getWeather">Get Weather</button>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

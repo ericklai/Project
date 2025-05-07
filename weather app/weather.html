@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
+    <link rel="stylesheet" href="weather.css">
 </head>
 <body>
-    <button onclick="popup.showModal()">Open</button>
-    <dialog  id="popup">
-        <h1>Popup</h1>
-        <button onclick="popup.close()">&times</button>
-    </dialog>
+    <!-- <img src="image.png"> -->
+    <div class="container">
+    <div class="header">
+        <h1 class="city">NAIROBI</h1>
+        <h3 class="day"></h3>
+        <div class="date-time">
+        <h3 class="date"></h3>
+        <h3 class="time"></h3>
+    </div>
+    </div>
+    <div class="weather"></div>
+    <input type="text" id="city"  label="city"/>
+    <button id="getWeather">Get Weather</button>
+</div>
+
+<script src="weather.js"></script>
 </body>
 </html>
