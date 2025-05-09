@@ -9,27 +9,37 @@
 <body>
   <div class="container">
     <header>
-      <h1>DSS</h1>
+      <h1>Digital Spark Studios</h1>
     </header>
     <main>
       <form class="login-form" action="home.html" method="get">
         <h2>Login</h2>
-        <label for="username">🤵🏾</label>
-        <input type="text" placeholder="Username" required />
-        <label for="phone-number">📱</label>
-        <input type="text" placeholder="Phone number" required />
-        <label for="password">🔑</label>
-        <input type="password" placeholder="Password" required />
-        <div class="forgot-password">
-            <div id="remember-me">
-            <!-- <input type="checkbox"  id="remember">
-            <p>Remember me</p> -->
-            <a href="#">Forgot Password?</a>
+
+        <label for="username" aria-label="Username">🤵🏾</label>
+        <input type="text" placeholder="Username" name="username" />
+
+        <label for="phone-number" aria-label="Phone number">📱</label>
+        <input type="text" placeholder="Phone number" name="phone-number" required />
+
+        <label for="password" aria-label="Password">🔑</label>
+        <input type="password" placeholder="Password" name="password" />
+
+        <div class="remember-forgot-password">
+          <label for="remember" class="remember-label">
+          <input type="checkbox" name="remember">
+          Remember me
+          </label>
         </div>
+        <a class="forgot-password" href="#" >Forgot Password?</a>
+
         <button type="submit">Login</button>
-        <div class="no-account">
-            <p>Do not have an account?</p>
+
+        <div class="register">
+            <p>Do not have an account?
             <a href="register.html">Register</a>
+          </p>
+          </div>
+
       </form>
     </main>
   </div>
