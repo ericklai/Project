@@ -6,9 +6,9 @@ window.addEventListener("load", () => {
   });
 
 
-  let completedEl = document.getElementById('completed');
-let ongoingEl = document.getElementById('ongoing');
-let progressEl = document.getElementById('progress');
+let completedEl = document.querySelector('#completed');
+let ongoingEl = document.querySelector('#ongoing');
+let progressEl = document.querySelector('#progress');
 
 document.querySelectorAll(".download-btn").forEach(button => {
   button.addEventListener("click", () => {
@@ -30,3 +30,34 @@ document.querySelectorAll(".download-btn").forEach(button => {
 });
 
   
+let joinButtons = document.querySelectorAll(".join");
+
+joinButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const jobCard = button.closest(".job");
+    
+    const jobTitle = jobCard.querySelector(".job-title").textContent;
+
+    localStorage.setItem("joinedJob", jobTitle);
+
+    button.textContent = "Joined";
+    button.style.opacity = "0.5";
+    button.disabled = true;
+    button.style.cursor = "not-allowed";
+
+    
+    alert(" Congratulations! You joined: " + jobTitle);
+
+     window.location.href = "profile.html";
+  });
+});
+
+
+ const jobLevel = localStorage.getItem("joinedJob");
+  if (jobLevel) {
+    document.querySelector(".job-level").textContent = jobLevel;
+  } else {
+    document.querySelector("job-level").textContent = "None";
+  }
+
+

@@ -1,3 +1,7 @@
+*::-webkit-scrollbar {
+    display: none;
+  }
+
    html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #e6f0ff;
@@ -5,7 +9,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    /* padding-bottom: 70vh; */
+    padding-bottom: 10vh;
     top: 0;
   }
 
@@ -29,7 +33,8 @@
  nav{
 background-color: rgb(255, 255, 255);
 width: 100vw;
-height: 15vh;
+/* height: 15vh; */
+padding-bottom: 0;
 bottom: 0;
 left: 0;
 display: flex;
@@ -39,6 +44,11 @@ padding: 10px 0;
 flex-wrap: wrap;
 overflow-x: auto;
 z-index: 100;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+ }
+
+ h5{
+  margin: 0;
  }
 
  nav a{
@@ -134,39 +144,18 @@ z-index: 100;
   }
   
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
   
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  th {
-    background-color: #4CAF50;
-    color: white;
-  }
-
-  table, th, td {
-    border: 1px solid #ccc;
-  }
 
   .main-content {
     /* flex: 1; */
     overflow-y: auto;
     padding: 20px;
-    height: 40vh;
+    /* height: 40vh; */
    
   }
 
   .join {
-    background-color: #4CAF50;
+    background-color: #007BFF;
     border: none;
     border-radius: 10px;
     color: white;
@@ -177,18 +166,47 @@ z-index: 100;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    grid-column: span 2;
+    width: 50%;
+    justify-self: center;
+    transition: background-color 0.3s ease-in-out;
   }
 
   .join:hover {
-    background-color: #3e8e41;
+    background-color: #0071eb;
   }
+
+  .join:active {
+    background-color: #0068d8;
+    transform: scale(0.9);
+  }
+
+  .job {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #cee2ff;
+  }
+
+  .job h2{
+    margin: 0;
+    grid-row: span 7;
+  }
+  
+  
 
   img{
     width: 40px;
     height: 40px;
   }
 
-  .task-head{
+  .task-head, .profile-head{
     color: #e6f0ff;
     background-color: #004aad;
   }
@@ -235,4 +253,251 @@ z-index: 100;
     background-color: #929292;
   }  
 
+ .profile-head{
+  text-align: center;
+  margin-top: 0;
+ }
+
+ .profile-container{
+  height: 100vh;
+  overflow-y: scroll;
+ }
+
+ .earnings{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #edf4ff;
+ }
+
+ .earnings h2{
+  text-align: center;
+  grid-column: span 2;
+ }
+
+ .time{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #9fccff;
+ }
  
+
+ .nav-icons{
+  width: 30px;
+  height: 30px;
+ }
+
+ .messages{
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 0;
+  height: auto;
+  background: #e6e6e6;
+ }
+
+ marquee{
+  height: 35vh;
+  
+ }
+
+ @media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .video-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  .nav-icons {
+    width: 24px;
+    height: 24px;
+  }
+
+  .video-container {
+    height: auto;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  .main-content {
+    height: auto;
+    padding: 10px;
+  }
+
+  .messages {
+    width: 100%;
+  }
+
+  .task-buttons {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .task-buttons button {
+    width: 90%;
+  }
+
+  marquee {
+    /* height: auto; */
+    font-size: 0.9rem;
+  }
+}
+
+.income{
+  background-color: #004aad;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.income button{
+  background-color: #ffffff;
+  color: #004aad;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+}
+
+.team-container{
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.team-header{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #004aad;
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.team-header button{
+  background-color: #ffffff;
+  color: #004aad;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.team-header button:hover{
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+.team-size, .team-income{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+
+.team-size{
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #e6c8f3;
+  color: #000000;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.team-income{
+  background-color: #dea4e7;
+  color: #000000;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.team{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  gap: 10px;
+  padding: 0 10px;
+  font-size: 1rem;
+  background-color: #dbdbdb;
+  color: #000000;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.team h2{
+ color: #ffffff;
+ background-color: #004aad;
+ padding: 10px;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ width: 100%;
+ font-size: 1rem;
+ margin: 0;
+}
+
+.task-income, .referral-income{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #f1f1f1;
+  color: #000000;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.task-referral{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #000000;
+  margin: 10px;
+}
