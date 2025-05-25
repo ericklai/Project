@@ -7,23 +7,22 @@ app = ctk.CTk()
 app.title("Calculator")
 app.geometry("400x350")
 
-# Input fields
 entry1 = ctk.CTkEntry(app, placeholder_text="Enter your first number")
 entry1.pack(pady=10)
 
 entry2 = ctk.CTkEntry(app, placeholder_text="Enter your second number")
 entry2.pack(pady=10)
 
-# Operation selector
+
 operation = ctk.StringVar(value="Add")
 operation_menu = ctk.CTkOptionMenu(app, values=["Add", "Subtract", "Multiply", "Divide"], variable=operation)
 operation_menu.pack(pady=10)
 
-# Result label
+
 result_label = ctk.CTkLabel(app, text="", font=ctk.CTkFont(size=14))
 result_label.pack(pady=20)
 
-# Calculation function
+
 def calculate():
     try:
         num1 = float(entry1.get())

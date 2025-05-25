@@ -1,12 +1,24 @@
-from twilio.rest import Client
+upper_case = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+lower_case = 'abcdefghijklmnopqrstuvwxyz'
+digits = '0123456789'
+symbols = '!@#$%^&*()_+-='
 
-account_sid = 'ACc2c10abcbb31d13066538e4b84470502'
-auth_token = '[38e6beeecfc342a9c9b64f09b8c9c330]'
-client = Client(account_sid, auth_token)
+password = input("Enter your password: ")
 
-message = client.messages.create(
-  from_='+12768776329',
-  to='+2540799498111'
-)
+def is_strong_password(password):
+  if len(password) < 8:
+    return False
+  if not any(char in upper_case for char in password):
+    return False
+  if not any(char in lower_case for char in password):
+    return False
+  if not any(char in digits for char in password):
+    return False
+  if not any(char in symbols for char in password):
+    return False
+  return True
 
-print(message.sid)
+if is_strong_password(password):
+  print("Strong password")
+else:
+  print("Weak password")

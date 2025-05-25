@@ -52,16 +52,4 @@ function playGame(playerChoice){
 }
 
 
-/*
-rock.addEventListener('click',function(){
-    alert('Your choice is rock')
-}
-)
-paper.addEventListener('click',function(){
-    alert('Your choice is paper')
-}
-)
-scissors.addEventListener('click',function(){
-    alert('Your choice is scissors')
-}
-)*/
+

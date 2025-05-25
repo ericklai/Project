@@ -1,2 +1,17 @@
-print(type(["apple", "banana", "cherry"]))
-print("hello world")
+# word = input("Enter a word: ")
+
+# def reverse(word):
+#     word = word[::-1]
+#     return word
+# print(reverse(word))
+
+word = input("Enter a word: ")
+
+def palindrome(word):
+    word = word[::-1]
+    return word
+
+if word == palindrome(word):
+    print("The word is a palindrome")
+else:
+    print("The word is not a palindrome")
