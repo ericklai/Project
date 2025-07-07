@@ -42,12 +42,12 @@ def calculate():
                 result_label.configure(text="Error: Cannot divide by zero!", text_color="red")
                 return
 
-        result_label.configure(text=f"Result: {result}", font=ctk.CTkFont(size=14), text_color="green")
+            result_label.configure(text=f"Result: {result}", font=ctk.CTkFont(size=14), text_color="green")
 
     except ValueError:
         result_label.configure(text="⚠️ Please enter valid numbers", text_color="red")
 
-# Button to calculate
+
 calculate_button = ctk.CTkButton(app, text="Calculate", command=calculate)
 calculate_button.pack(pady=10)
 

@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	background: #333;
+}
+
+#gameArea {
+	width: 400px;
+	height: 600px;
+	margin: 0 auto;
+	background: #222;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid #fff;
+}
+
+#playerCar {
+	width: 40px;
+	height: 80px;
+	background: red;
+	position: absolute;
+	bottom: 20px;
+	left: 180px;
+	border-radius: 10px;
+}
